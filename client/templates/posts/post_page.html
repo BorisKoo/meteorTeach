@@ -2,12 +2,14 @@
   <div class="post-page page">
     {{> postItem}}
   
-    <ul class="comments">
+    <div class="comments"><!--div / ul -->
+           
       {{#each comments}}
+       
         {{> commentItem}}
+       
       {{/each}}
-    </ul>
-  
+    </div> 
     {{#if currentUser}}
       {{> commentSubmit}}
     {{else}}

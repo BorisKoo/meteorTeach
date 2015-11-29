@@ -16,7 +16,7 @@ Template.postSubmit.events({
     e.preventDefault();
     
     var post = {
-      url: $(e.target).find('[name=url]').val(),
+      text: $(e.target).find('[name=text]').val(),
       title: $(e.target).find('[name=title]').val()
     };
     
@@ -30,8 +30,8 @@ Template.postSubmit.events({
         return throwError(error.reason);
       
       // show this result but route anyway
-      if (result.postExists)
-        throwError('This link has already been posted');
+      /*if (result.postExists)
+        throwError('This link has already been posted');*/
       
       Router.go('postPage', {_id: result._id});  
     });
