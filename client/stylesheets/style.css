@@ -81,13 +81,15 @@ body {
   list-style-type: none;
   margin: 0; }
   .comments li h4 {
-    font-size: 16px;
+    font-size: 14px;
     margin: 0; }
     .comments li h4 .date {
       font-size: 12px;
       font-weight: normal; }
     .comments li h4 a {
-      font-size: 12px; }
+      font-size: 14px; }
+     .comments li h3 {
+      font-size: 18px; } 
   .comments li p:last-child {
     margin-bottom: 0; }
 
