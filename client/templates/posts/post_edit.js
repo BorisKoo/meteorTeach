@@ -23,7 +23,7 @@ Template.postEdit.events({
     }
     
     var errors = validatePost(postProperties);
-    if (errors.title || errors.url)
+    if (errors.title || errors.text)
       return Session.set('postEditErrors', errors);
     
     Posts.update(currentPostId, {$set: postProperties}, function(error) {

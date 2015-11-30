@@ -3,7 +3,11 @@
     <h4>
       <span class="author">{{author}}</span>
       <span class="date">on {{submittedText}}</span>
+
+       {{#if ownComment}}<a href="{{pathFor 'commentEdit'}}">Edit</a>{{/if}}
+
     </h4>
     <p>{{body}}</p>
+
   </li>
 </template>

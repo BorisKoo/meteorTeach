@@ -11,6 +11,11 @@ Meteor.publish('singlePost', function(id, options) {
   return Posts.find(id, options);
 });
 
+Meteor.publish('singleComment', function(id, options) {
+  check(id, String);
+  return Comments.find(id, options);
+});
+
 
 Meteor.publish('comments', function(postId, options) {
   check(postId, String);
