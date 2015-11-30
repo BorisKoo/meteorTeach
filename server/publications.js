@@ -6,15 +6,15 @@ Meteor.publish('posts', function(options) {
   return Posts.find({}, options);
 });
 
-Meteor.publish('singlePost', function(id) {
+Meteor.publish('singlePost', function(id, options) {
   check(id, String);
-  return Posts.find(id);
+  return Posts.find(id, options);
 });
 
 
-Meteor.publish('comments', function(postId) {
+Meteor.publish('comments', function(postId, options) {
   check(postId, String);
-  return Comments.find({postId: postId});
+  return Comments.find({postId: postId}, options);
 });
 
 Meteor.publish('notifications', function() {

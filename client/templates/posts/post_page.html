@@ -10,6 +10,12 @@
        
       {{/each}}
     </div> 
+
+    {{#if notEnd}}
+    <div><a class="load-more" href="{{nextPathComments}}">Load more</a></div>
+    <!--<div><a class="load-more" href="{{toEndComments}}">Go to last comment</a></div>-->
+    {{/if}}
+
     {{#if currentUser}}
       {{> commentSubmit}}
     {{else}}
