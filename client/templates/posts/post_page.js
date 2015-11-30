@@ -1,3 +1,9 @@
+Template.postPage.onCreated(function() {
+
+  Meteor.call('viewPost',this.data._id);
+  
+})
+
 Template.postPage.helpers({
  
   comments: function() {
@@ -11,7 +17,8 @@ Template.postPage.helpers({
    },
    notEnd: function(){
    	return this.commentsCount > Comments.find({postId: this._id}).count() ? true : false
-   }/*,
+   }
+   /*,
    toEndComments: function(){
    	var endLimit = this.commentsCount;
    	Router.routes.postPage.path({_id: this._id, commentsLimit: endLimit});
