@@ -18,11 +18,11 @@ Template.postPage.helpers({
    notEnd: function(){
    	return this.commentsCount > Comments.find({postId: this._id}).count() ? true : false
    }
-   /*,
+   ,
    toEndComments: function(){
    	var endLimit = this.commentsCount;
-   	Router.routes.postPage.path({_id: this._id, commentsLimit: endLimit});
-   }*/
+   	return Router.routes.postPage.path({_id: this._id, commentsLimit: endLimit});
+   }
 });
 
 //у id есть коментсс каунт, по которым можно определить - ставить ли кнопку "показать ещё"
