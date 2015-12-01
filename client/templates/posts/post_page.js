@@ -24,5 +24,3 @@ Template.postPage.helpers({
    	return Router.routes.postPage.path({_id: this._id, commentsLimit: endLimit});
    }
 });
-
-//у id есть коментсс каунт, по которым можно определить - ставить ли кнопку "показать ещё"

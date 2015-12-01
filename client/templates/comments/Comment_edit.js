@@ -19,14 +19,8 @@ Template.commentEdit.events({
     var currentPostId = this.postId;
     
     var commentProperties = {
-      body: $(e.target).find('[name=body]').val()//,
-     // title: $(e.target).find('[name=title]').val()
-    }
-    
-    /*var errors = validateComment(commentProperties);
-    if (errors.body)
-      return Session.set('commentEditErrors', errors);*/
-    
+      body: $(e.target).find('[name=body]').val()}
+         
     Comments.update(currentCommentId, {$set: commentProperties}, function(error) {
       if (error) {
         // display the error to the user
